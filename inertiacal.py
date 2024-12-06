@@ -1,7 +1,7 @@
 import sys
 #the location of FreeCadLibs
 #For Linux Debian, locaiton is stable like "/usr/lib/freecad/lib".
-sys.path.append('<FreeCadLib location')
+sys.path.append('<FreeCadLib location>')
 
 import FreeCAD
 import Mesh
@@ -12,7 +12,7 @@ stl_file = "<.stl_file_location>"
 mesh = Mesh.Mesh(stl_file)
 
 shape = Part.Shape()
-# you can change the error prop. of bottom code.
+# you can change the error prop. of bottom code like "0.1".
 shape.makeShapeFromMesh(mesh.Topology, 0.1)  
 solid = Part.Solid(shape)
 
